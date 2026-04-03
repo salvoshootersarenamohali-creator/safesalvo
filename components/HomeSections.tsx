@@ -236,7 +236,7 @@ export function CoachesPreview() {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row justify-between items-end mb-12">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Our Legacy</h2>
             <p className="mt-4 text-lg text-muted-foreground">Backed by Salvo Shooters Arena</p>
