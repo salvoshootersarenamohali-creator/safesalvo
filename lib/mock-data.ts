@@ -40,41 +40,20 @@ export const FAQS = [
 export const COACHES = [
   {
     id: "1",
-    name: "Vikram Singh",
-    title: "Head Pistol Coach",
-    expertise: "Former National Medalist, 10+ years coaching",
+    name: "Anjum Moudgil",
+    title: "Olympian & Arjuna Awardee",
+    expertise: "Tokyo 2020 Olympian · Arjuna Award 2019 · Commonwealth Games Record Holder · Ranked World No.1 in Rifle 3P · Multiple World Cup Gold Medalist",
     image: "/placeholder-coach-1.jpg"
-  },
-  {
-    id: "2",
-    name: "Aarti Sharma",
-    title: "Lead Rifle Coach",
-    expertise: "Specializes in youth development & posture",
-    image: "/placeholder-coach-2.jpg"
-  },
-  {
-    id: "3",
-    name: "Rahul Verma",
-    title: "Performance Analyst",
-    expertise: "Focuses on mental composure & technique",
-    image: "/placeholder-coach-3.jpg"
-  },
-  {
-    id: "4",
-    name: "Neha Patel",
-    title: "Beginner Specialist Coach",
-    expertise: "Expert in introducing shooting sports to kids",
-    image: "/placeholder-coach-4.jpg"
   }
 ];
 
 export const PARTNERS = [
-  { id: "1", name: "St. Xavier's High School", logo: "/placeholder-logo-1.png" },
-  { id: "2", name: "Delhi Public School", logo: "/placeholder-logo-2.png" },
-  { id: "3", name: "Modern Vidya Niketan", logo: "/placeholder-logo-3.png" },
-  { id: "4", name: "Oakridge International", logo: "/placeholder-logo-4.png" },
-  { id: "5", name: "Springdales School", logo: "/placeholder-logo-5.png" },
-  { id: "6", name: "The Heritage School", logo: "/placeholder-logo-6.png" }
+  { id: "1", name: "SD College", location: "Sector 32-C, Chandigarh", logo: "/placeholder-logo-1.png" },
+  { id: "2", name: "Learning Paths School", location: "Sector 67, SAS Nagar", logo: "/placeholder-logo-2.png" },
+  { id: "3", name: "OPBMS School", location: "Mandi Gobindgarh", logo: "/placeholder-logo-3.png" },
+  { id: "4", name: "DAV College", location: "Sector 10, Chandigarh", logo: "/placeholder-logo-4.png" },
+  { id: "5", name: "Carmel Convent School", location: "Sector 9, Chandigarh", logo: "/placeholder-logo-5.png" },
+  { id: "6", name: "Chitkara University", location: "Rajpura", logo: "/placeholder-logo-6.png" }
 ];
 
 export const GALLERY_IMAGES = [

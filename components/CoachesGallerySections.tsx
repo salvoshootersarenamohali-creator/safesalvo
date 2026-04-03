@@ -1,13 +1,10 @@
 "use client";
 
-import { ArrowRight, Trophy, Users, Shield, BookOpen, Star } from "lucide-react";
+import { Users, BookOpen } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { COACHES, PARTNERS, GALLERY_IMAGES } from "@/lib/mock-data";
-import { cn } from "@/lib/utils";
 
 export function PageBanner() {
   return (
@@ -111,47 +108,3 @@ export function GallerySection() {
   );
 }
 
-export function LeadershipSection() {
-  return (
-    <section className="py-20 bg-foreground text-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-         <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center bg-background/5 border border-background/10 rounded-3xl p-8 md:p-12">
-            <div className="md:col-span-2 relative aspect-square rounded-2xl overflow-hidden bg-background/10">
-               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <Trophy className="w-16 h-16 text-primary mb-2 opacity-80" />
-                  <span className="text-background/60 text-sm">Founder Placeholder</span>
-               </div>
-            </div>
-            <div className="md:col-span-3 space-y-6">
-               <h2 className="text-3xl font-bold text-background">Directed by Champions</h2>
-               <p className="text-background/80 text-lg leading-relaxed">
-                 The Safe Salvo initiative is overseen by the leadership of Salvo Shooters Arena. Our core philosophy is that absolute safety and elite methodology are not mutually exclusive. 
-               </p>
-               <p className="text-background/80 text-lg leading-relaxed">
-                 We've engineered this program so that schools can confidently offer international-standard sports without the historical risks.
-               </p>
-               <div>
-                 <p className="font-bold text-xl text-primary mt-4">Leadership Name</p>
-                 <p className="text-background/60 text-sm">Director, Salvo Shooters Arena</p>
-               </div>
-            </div>
-         </div>
-      </div>
-    </section>
-  );
-}
-
-export function CTASection() {
-  return (
-    <section className="py-24 bg-background text-center relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="container relative z-10 mx-auto px-4 text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">Join the Network</h2>
-        <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto mb-10">We are expanding into more schools and institutions. Ensure your students don't miss out.</p>
-        <Link href="/#contact" className={cn(buttonVariants({ size: "lg" }), "font-bold text-lg px-8 h-14 shadow-xl shadow-primary/20")}>
-          Become a Partner
-        </Link>
-      </div>
-    </section>
-  );
-}

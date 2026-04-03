@@ -2,9 +2,7 @@ import {
   PageBanner,
   CoachesSection,
   PartnersSection,
-  GallerySection,
-  LeadershipSection,
-  CTASection
+  GallerySection
 } from "@/components/CoachesGallerySections";
 import { Metadata } from "next";
 
@@ -20,8 +18,6 @@ export default function CoachesGalleryPage() {
       <CoachesSection />
       <PartnersSection />
       <GallerySection />
-      <LeadershipSection />
-      <CTASection />
     </div>
   );
 }

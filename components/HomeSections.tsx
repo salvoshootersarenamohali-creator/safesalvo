@@ -6,7 +6,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { FAQS, COACHES } from "@/lib/mock-data";
+import { FAQS, COACHES, PARTNERS } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
 
 export function HeroSection() {
@@ -73,7 +73,7 @@ export function WhyDifferent() {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-background relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-secondary/30 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Why Safe Salvo is Different</h2>
@@ -101,7 +101,7 @@ export function WhyDifferent() {
 
 export function Disciplines() {
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
          <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Precision Disciplines</h2>
@@ -238,8 +238,8 @@ export function CoachesPreview() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between items-end mb-12">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Meet the Coaches</h2>
-            <p className="mt-4 text-lg text-muted-foreground">Expert supervision is the foundation of our safety.</p>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Our Legacy</h2>
+            <p className="mt-4 text-lg text-muted-foreground">Backed by Salvo Shooters Arena</p>
           </div>
           <Link href="/coaches-gallery" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-1 mt-4 sm:mt-0">
             View All Coaches <ArrowRight className="w-4 h-4" />
@@ -294,21 +294,25 @@ export function ExpertVideos() {
   );
 }
 
-export function AboutLegacy() {
+
+export function PartnersSection() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background border-y border-border/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center border p-12 md:p-16 rounded-3xl bg-secondary/20 relative overflow-hidden">
-           <div className="absolute top-0 right-0 p-8 opacity-5">
-             <Target className="w-48 h-48" />
-           </div>
-           <Badge variant="outline" className="mb-6 mx-auto px-4 py-1.5 rounded-full border-foreground/20 text-foreground text-sm">
-            Our Legacy
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">Backed by Salvo Shooters Arena</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Safe Salvo was born out of <strong>Salvo Shooters Arena's</strong> mission to bring structured shooting sports exposure to schools across cities and countries. By eliminating traditional barriers—such as space requirements and live projectiles—we ensure that every student can learn precision, discipline, and focus safely.
-          </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Our Partners</h2>
+          <p className="mt-4 text-lg text-muted-foreground">Trusted by leading institutions across the region</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {PARTNERS.map((partner) => (
+            <div key={partner.id} className="bg-card border border-border/50 rounded-2xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mb-3">
+                <span className="text-muted-foreground text-xs font-medium">Logo</span>
+              </div>
+              <h4 className="font-semibold text-sm text-foreground">{partner.name}</h4>
+              <p className="text-muted-foreground text-xs mt-1">{partner.location}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
