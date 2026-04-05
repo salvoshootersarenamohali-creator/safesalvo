@@ -43,7 +43,7 @@ export const COACHES = [
     name: "Anjum Moudgil",
     title: "Olympian & Arjuna Awardee",
     expertise: "Tokyo 2020 Olympian · Arjuna Award 2019 · Commonwealth Games Record Holder · Ranked World No.1 in Rifle 3P · Multiple World Cup Gold Medalist",
-    image: "/placeholder-coach-1.jpg"
+    image: "/anjum.jpg"
   }
 ];
 

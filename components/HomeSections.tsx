@@ -280,9 +280,7 @@ export function CoachesPreview() {
           {previewCoaches.map((coach) => (
             <Card key={coach.id} className="overflow-hidden border-border/50 bg-card group">
               <div className="aspect-square bg-muted relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center bg-secondary/80">
-                  <span className="text-muted-foreground text-sm font-medium">{coach.image}</span>
-                </div>
+                {coach.image && <Image src={coach.image} alt={coach.name} fill className="object-cover" />}
               </div>
               <CardCardContent className="p-6">
                 <h3 className="font-bold text-xl">{coach.name}</h3>

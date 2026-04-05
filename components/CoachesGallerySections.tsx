@@ -36,10 +36,7 @@ export function CoachesSection() {
           {COACHES.map((coach) => (
             <Card key={coach.id} className="overflow-hidden border-border/50 shadow-sm group">
               <div className="aspect-[4/5] bg-muted relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center bg-secondary/80">
-                  <UserIcon className="w-16 h-16 text-muted-foreground/30" />
-                  <span className="absolute bottom-4 text-xs font-medium text-muted-foreground">{coach.image}</span>
-                </div>
+                {coach.image && <Image src={coach.image} alt={coach.name} fill className="object-cover" />}
               </div>
               <CardContent className="p-6">
                 <h3 className="font-bold text-xl">{coach.name}</h3>
