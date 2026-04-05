@@ -48,12 +48,12 @@ export const COACHES = [
 ];
 
 export const PARTNERS = [
-  { id: "1", name: "SD College", location: "Sector 32-C, Chandigarh", logo: "/placeholder-logo-1.png" },
-  { id: "2", name: "Learning Paths School", location: "Sector 67, SAS Nagar", logo: "/placeholder-logo-2.png" },
-  { id: "3", name: "OPBMS School", location: "Mandi Gobindgarh", logo: "/placeholder-logo-3.png" },
-  { id: "4", name: "DAV College", location: "Sector 10, Chandigarh", logo: "/placeholder-logo-4.png" },
-  { id: "5", name: "Carmel Convent School", location: "Sector 9, Chandigarh", logo: "/placeholder-logo-5.png" },
-  { id: "6", name: "Chitkara University", location: "Rajpura", logo: "/placeholder-logo-6.png" }
+  { id: "1", name: "SD College", location: "Sector 32-C, Chandigarh", logo: "/sd-college-logo.png" },
+  { id: "2", name: "Learning Paths School", location: "Sector 67, SAS Nagar", logo: "/lps-logo.png" },
+  { id: "3", name: "OPBMS School", location: "Mandi Gobindgarh", logo: "/opbms.png" },
+  { id: "4", name: "DAV College", location: "Sector 10, Chandigarh", logo: "/dav-logo.jpg" },
+  { id: "5", name: "Carmel Convent School", location: "Sector 9, Chandigarh", logo: "/ccs-logo.png" },
+  { id: "6", name: "Chitkara University", location: "Rajpura", logo: "/chitkara-logo.jpeg" }
 ];
 
 export const GALLERY_IMAGES = [

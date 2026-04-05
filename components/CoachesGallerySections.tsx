@@ -70,8 +70,8 @@ export function PartnersSection() {
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {PARTNERS.map((partner) => (
-            <div key={partner.id} className="bg-card aspect-square rounded-2xl border border-border shadow-sm flex flex-col items-center justify-center p-4 text-center hover:border-primary transition-colors group">
-              <BookOpen className="w-8 h-8 text-muted-foreground/40 mb-3 group-hover:text-primary transition-colors" />
+            <div key={partner.id} className="bg-card aspect-square rounded-2xl border border-border shadow-sm flex flex-col items-center justify-center p-6 text-center hover:border-primary transition-colors group">
+              {partner.logo ? <Image src={partner.logo} alt={partner.name} width={64} height={64} className="object-contain mb-3" /> : <BookOpen className="w-8 h-8 text-muted-foreground/40 mb-3 group-hover:text-primary transition-colors" />}
               <span className="text-sm font-semibold text-foreground/80">{partner.name}</span>
             </div>
           ))}

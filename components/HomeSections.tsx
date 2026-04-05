@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ShieldCheck, Target, Crosshair, Users, Activity, ChevronRight, Play } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -12,23 +13,30 @@ import { cn } from "@/lib/utils";
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-background to-background pointer-events-none" />
+      <Image
+        src="/DSC05830.JPG"
+        alt=""
+        fill
+        className="object-cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-black/70" />
       <div className="container relative z-10 mx-auto px-4 text-center sm:px-6 lg:px-8">
-        <Badge variant="outline" className="mb-6 px-4 py-1.5 rounded-full border-primary/30 bg-primary/5 text-primary text-sm font-medium">
+        <p className="mb-6 text-sm font-medium tracking-widest uppercase text-white/60">
           A Salvo Shooters Arena Initiative
-        </Badge>
-        <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
+        </p>
+        <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-7xl">
           Safe Shooting Sports <br className="hidden md:block"/>
           <span className="text-primary">for Schools</span>
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl leading-relaxed">
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80 md:text-xl leading-relaxed">
           Safe Salvo introduces students to shooting sports through proprietary electronic pistol and rifle systems designed for safe, school-friendly training environments.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <Link href="#contact" className={cn(buttonVariants({ size: "lg" }), "font-semibold w-full sm:w-auto shadow-lg shadow-primary/20")}>
             Partner With Us
           </Link>
-          <Link href="#how-it-works" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "font-semibold w-full sm:w-auto")}>
+          <Link href="#how-it-works" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "font-semibold w-full sm:w-auto !border-white !text-white !bg-transparent hover:!bg-white/10")}>
             Explore the Program
           </Link>
         </div>
@@ -51,10 +59,13 @@ export function WhatIsSafeSalvo() {
               Our compact setup removes the need for traditional 10m ranges while delivering the same discipline, focus, and core training of Olympic-style shooting.
             </p>
           </div>
-          <div className="relative rounded-2xl bg-muted overflow-hidden aspect-video shadow-xl">
-            <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
-              <span className="text-muted-foreground text-sm font-medium">Safe Salvo Overview Image [Placeholder]</span>
-            </div>
+          <div className="relative rounded-2xl overflow-hidden aspect-video shadow-xl">
+            <Image
+              src="/DSC05930.JPG"
+              alt="Safe Salvo Overview"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </div>
@@ -113,8 +124,15 @@ export function Disciplines() {
           <div className="group relative rounded-3xl overflow-hidden bg-card border border-border shadow-sm">
             <div className="aspect-[4/3] bg-muted relative">
               <div className="absolute inset-0 bg-accent/20 flex flex-col items-center justify-center p-6 text-center">
-                 <Target className="w-16 h-16 text-primary mb-4 opacity-50" />
-                 <span className="text-muted-foreground font-medium">Electronic Pistol System [Placeholder]</span>
+                 <Image
+                  src="/DSC05966.JPG"
+                  alt=""
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                 <span className="text-muted-foreground font-medium">Electronic Pistol Training System</span>
+
               </div>
             </div>
             <div className="p-8">
@@ -127,8 +145,14 @@ export function Disciplines() {
           <div className="group relative rounded-3xl overflow-hidden bg-card border border-border shadow-sm">
             <div className="aspect-[4/3] bg-muted relative">
               <div className="absolute inset-0 bg-primary/10 flex flex-col items-center justify-center p-6 text-center">
-                 <Crosshair className="w-16 h-16 text-accent mb-4 opacity-50" />
-                 <span className="text-muted-foreground font-medium">Electronic Rifle System [Placeholder]</span>
+              <Image
+                  src="/DSC05769.JPG"
+                  alt=""
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                 <span className="text-muted-foreground font-medium">Electronic Rifle Training System</span>
               </div>
             </div>
             <div className="p-8">
@@ -172,7 +196,13 @@ export function WhySchoolsChooseUs() {
           </div>
           <div className="relative rounded-2xl bg-background/5 overflow-hidden aspect-square border border-background/10">
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-background/50 text-sm font-medium">School Integration [Placeholder Image]</span>
+              <Image
+                src="/DSC06013.JPG"
+                alt=""
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -306,8 +336,8 @@ export function PartnersSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {PARTNERS.map((partner) => (
             <div key={partner.id} className="bg-card border border-border/50 rounded-2xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mb-3">
-                <span className="text-muted-foreground text-xs font-medium">Logo</span>
+              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mb-3 relative overflow-hidden">
+                {partner.logo ? <Image src={partner.logo} alt={partner.name} fill className="object-contain p-3" /> : <span className="text-muted-foreground text-xs font-medium">Logo</span>}
               </div>
               <h4 className="font-semibold text-sm text-foreground">{partner.name}</h4>
               <p className="text-muted-foreground text-xs mt-1">{partner.location}</p>
