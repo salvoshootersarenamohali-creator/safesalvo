@@ -4,7 +4,7 @@ import { Users, BookOpen } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { COACHES, PARTNERS, GALLERY_IMAGES } from "@/lib/mock-data";
+import { COACHES, PARTNERS, GALLERY_IMAGES } from "@/lib/data";
 
 export function PageBanner() {
   return (

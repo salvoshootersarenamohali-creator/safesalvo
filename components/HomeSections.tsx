@@ -7,7 +7,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { FAQS, COACHES, PARTNERS } from "@/lib/mock-data";
+import { FAQS, COACHES, PARTNERS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function HeroSection() {

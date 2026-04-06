@@ -44,6 +44,13 @@ export const COACHES = [
     title: "Olympian & Arjuna Awardee",
     expertise: "Tokyo 2020 Olympian · Arjuna Award 2019 · Commonwealth Games Record Holder · Ranked World No.1 in Rifle 3P · Multiple World Cup Gold Medalist",
     image: "/anjum.jpg"
+  },
+  {
+    id: "2",
+    name: "Anshul Bhardwaj",
+    title: "Professional Shooting Coach & MD, Salvo Shooters Arena",
+    expertise: "NIS Certified Firearms Coach · National-Level Pistol Shooter · Asian Championship Selection (2013) · 20+ Years in Competitive Shooting · Mentor to State & National Level Shooters",
+    image: "/placeholder-coach.jpg"
   }
 ];
 
