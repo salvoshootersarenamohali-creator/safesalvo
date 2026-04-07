@@ -26,7 +26,7 @@ export function HeroSection() {
           A Salvo Shooters Arena Initiative
         </p>
         <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-7xl">
-          Safe Shooting Sports <br className="hidden md:block"/>
+          Safe Shooting Sports <br className="hidden md:block" />
           <span className="text-primary">for Schools</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80 md:text-xl leading-relaxed">
@@ -53,7 +53,7 @@ export function WhatIsSafeSalvo() {
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">What is Safe Salvo?</h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Safe Salvo is a school-focused initiative by Salvo Shooters Arena. We utilize proprietary electronic training systems to introduce precision shooting sports in a safer, more accessible, and fully school-compatible way. 
+              Safe Salvo is a school-focused initiative by Salvo Shooters Arena. We utilize proprietary electronic training systems to introduce precision shooting sports in a safer, more accessible, and fully school-compatible way.
             </p>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Our compact setup removes the need for traditional 10m ranges while delivering the same discipline, focus, and core training of Olympic-style shooting.
@@ -114,24 +114,24 @@ export function Disciplines() {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-         <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Precision Disciplines</h2>
           <p className="mt-4 text-lg text-primary font-medium">Two disciplines. One safe system. One elite standard of coaching.</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {/* Pistol */}
           <div className="group relative rounded-3xl overflow-hidden bg-card border border-border shadow-sm">
             <div className="aspect-[4/3] bg-muted relative">
               <div className="absolute inset-0 bg-accent/20 flex flex-col items-center justify-center p-6 text-center">
-                 <Image
+                <Image
                   src="/DSC05966.JPG"
                   alt=""
                   fill
                   className="object-cover"
                   priority
                 />
-                 <span className="text-muted-foreground font-medium">Electronic Pistol Training System</span>
+                <span className="text-muted-foreground font-medium">Electronic Pistol Training System</span>
 
               </div>
             </div>
@@ -145,14 +145,14 @@ export function Disciplines() {
           <div className="group relative rounded-3xl overflow-hidden bg-card border border-border shadow-sm">
             <div className="aspect-[4/3] bg-muted relative">
               <div className="absolute inset-0 bg-primary/10 flex flex-col items-center justify-center p-6 text-center">
-              <Image
+                <Image
                   src="/DSC05769.JPG"
                   alt=""
                   fill
                   className="object-cover"
                   priority
                 />
-                 <span className="text-muted-foreground font-medium">Electronic Rifle Training System</span>
+                <span className="text-muted-foreground font-medium">Electronic Rifle Training System</span>
               </div>
             </div>
             <div className="p-8">
@@ -275,7 +275,7 @@ export function CoachesPreview() {
             View All Coaches <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {previewCoaches.map((coach) => (
             <Card key={coach.id} className="overflow-hidden border-border/50 bg-card group">
@@ -296,24 +296,45 @@ export function CoachesPreview() {
 }
 
 // Temporary card content wrapper to match above
-function CardCardContent({children, className}: {children: React.ReactNode, className?: string}) {
+function CardCardContent({ children, className }: { children: React.ReactNode, className?: string }) {
   return <div className={className}>{children}</div>;
 }
 
 export function ExpertVideos() {
+  const videos = [
+    {
+      title: "Coach Insight 1",
+      embedUrl: "https://drive.google.com/file/d/1_oLiZZJPiSWtUfs5tFrS-DlCOOXaOIJJ/preview",
+    },
+    {
+      title: "Coach Insight 2",
+      embedUrl: "https://drive.google.com/file/d/1DaOjlf-IVH6QZBcr5d7CIJJ7KQOzI_4Z/preview",
+    },
+  ];
+
   return (
     <section className="py-20 bg-foreground text-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold tracking-tight mb-4 text-background">Coach Insights & Videos</h2>
-        <p className="text-background/70 mb-12 max-w-2xl mx-auto">Hear from our professional athletes and coaches about the discipline required for precision shooting.</p>
-        
+        <h2 className="text-3xl font-bold tracking-tight mb-4 text-background">
+          Coach Insights & Videos
+        </h2>
+        <p className="text-background/70 mb-12 max-w-2xl mx-auto">
+          Hear from our professional athletes and coaches about the discipline required for precision shooting.
+        </p>
+
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {[1,2].map((i) => (
-            <div key={i} className="relative aspect-video rounded-2xl bg-background/10 border border-background/20 flex flex-col items-center justify-center group cursor-pointer overflow-hidden">
-              <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-primary/20">
-                <Play className="w-6 h-6 text-primary-foreground fill-primary-foreground ml-1" />
-              </div>
-              <span className="mt-4 font-medium text-background/80">Video Placeholder {i}</span>
+          {videos.map((video, i) => (
+            <div
+              key={i}
+              className="relative aspect-video rounded-2xl bg-background/10 border border-background/20 flex flex-col items-center justify-center group cursor-pointer overflow-hidden"
+            >
+              <iframe
+                src={video.embedUrl}
+                title={video.title}
+                className="absolute inset-0 h-full w-full"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           ))}
         </div>
@@ -321,7 +342,6 @@ export function ExpertVideos() {
     </section>
   );
 }
-
 
 export function PartnersSection() {
   return (
